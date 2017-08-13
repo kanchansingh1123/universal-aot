@@ -1,0 +1,19 @@
+Aot Guidelines - 
+
+1) Use relative path in import.
+2) Always give type to variable and parameters in a function.
+
+
+
+
+
+----- Getting your Angular 2 library ready for AoT ----------
+
+Commands - 
+
+1) ng build --aot --prod
+2) ng build --prod
+3) ng build --prod --aot
+
+Note: eventually AOT will be the default mode in Angular CLI, and the --aot flag will not be required
+

@@ -1,0 +1,36 @@
+{
+	"jwt": {
+		"audience": "https://uat-sales.incred.com/",
+		"issuer": "https://uat.incred.com"
+	},
+	"auth0": {
+		"domain":       "uat-incred.auth0.com",
+		"clientID":     "gXndS2FLSl5fGk6XpEmbOyp41TdB5SZl",
+		"callbackURL":  "https://uat-sales.incred.com/callback"
+	},
+	"initial": {
+		"title": "Sales",
+		"redirect": "/dashboard",
+		"allowedUrls": ["/", "/callback"]
+	},
+	"api": {
+		"connection": {
+			"protocol": "https:",
+			"host": "uat-api.incred.com",
+			"port": 443,
+			"endpoint": "/endpoint"
+		}
+	},
+	"filestack": {
+		"key": "AtwbB54GRKuuUtalBgIFAz"
+	},
+	"s3":{  
+        "key":"file-read-write",
+        "signatureVersion":"v4",
+        "bucket":{  
+            "customer":"uat-inc-cust",
+            "application":"uat-inc-app",
+            "user":"uat-inc-user"
+        }
+    }
+}

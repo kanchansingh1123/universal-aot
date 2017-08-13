@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<!--<base href="/">-->
+	<meta charset="UTF-8">
+	<title>SALES</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="msapplication-tap-highlight" content="no">
+
+	<link rel="icon" type="image/x-icon" href="//assets.incred.com/icon/favicon.ico">
+	<link rel="manifest" href="manifest.json">
+	<meta name="theme-color" content="#4e8ef7">
+
+	<!-- loader css -->
+	<link href="//assets.incred.com/css/loader.css" rel="stylesheet">
+
+
+	<!-- cordova.js required for cordova apps -->
+	<!--<script src="cordova.js"></script>-->
+
+	<!-- un-comment this code to enable service worker
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('service worker installed'))
+        .catch(err => console.log('Error', err));
+    }
+  </script>-->
+
+  <script>
+	window.location.hash="/web"
+  </script>
+
+</head>
+
+<body>
+
+	<!--<div class="overlay" >
+        <div id="tout">
+            <div>
+                <div>
+                    <div style="background-color: #f16138;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+	<div id="loader-wrapper">
+		<div id="loader"></div>
+		<div class="loader-bg"></div>
+		<div class="loader-logo-section">
+			<img class="loader-logo-img" src="//assets.incred.com/images/logo.png" />
+		</div>
+		<div class="loader-msg-section">
+			Please Wait...
+		</div>
+		<div class="loader-section section-left"></div>
+		<div class="loader-section section-right"></div>
+	</div>
+	<!--BEGIN LOADER -->
+	<div class="pageLoading" id="loadingImage" style="z-index: 15000 !important;display:none">
+		<img src="//assets.incred.com/images/loader.gif" style="margin: 25%;" />
+	</div>
+	<!--END LOADER -->
+
+	<!--set user email -->
+	<div id="useremail" style="display: none;"></div>
+
+
+	<!-- Ionic's root component and where the app will load -->
+	<ion-app></ion-app>
+	<!-- <app-root></app-root> -->
+
+	<!-- Added Css Files -->
+	<!-- incred theme css files -->
+	<link href="//assets.incred.com/css/bootstrap.min.css" rel="stylesheet">
+	<link href="//assets.incred.com/css/components.min.css" rel="stylesheet">
+	<link href="//assets.incred.com/css/custom.min.css" rel="stylesheet">
+	<link href="//assets.incred.com/css/layout.min.css" rel="stylesheet">
+	<link href="//assets.incred.com/css/simple-line-icons.min.css" rel="stylesheet">
+	<!--<link href="//assets.incred.com/css/datatables.min.css" rel="stylesheet">-->
+	<link href="//assets.incred.com/css/plugins.min.css" rel="stylesheet">
+	<link href="//assets.incred.com/css/font-awesome.min.css" rel="stylesheet">
+	<link href="//assets.incred.com/css/bootstrap-fileinput.css" rel="stylesheet">
+	<link href="//assets.incred.com/css/bootstrap-datepicker.min.css" rel="stylesheet">
+	<link href="//assets.incred.com/css/default.css" rel="stylesheet">
+	<link href="build/main.css" rel="stylesheet">
+
+	<!-- custom css files -->
+	<link href="//assets.incred.com/css/style.css" rel="stylesheet">
+	<link href="assets/css/web/style.css" rel="stylesheet">
+
+	<!-- Addred Jquery dependency -->
+	<script src="//assets.incred.com/lib/jquery.min.js"></script>
+
+	<!-- Select 2 lib -->
+	<script src="assets/js/select2.min.js"></script>
+
+	<!--BEGIN TOASTER PLUGIN-->
+	<link type="text/css", rel="stylesheet", href="//assets.incred.com/css/toastr.min.css">
+	<script type="text/javascript", src="//assets.incred.com/js/toastr.min.js"></script>
+	<script type="text/javascript", src="//assets.incred.com/js/ui-toastr.min.js"></script>
+	<!--END TOASTER PLUGIN-->
+	
+	<script src="//cdn.auth0.com/js/lock/10.12.1/lock.min.js"></script>
+	<script src="//cdn.auth0.com/js/lock-passwordless-2.2.js"></script>
+
+	<!-- START SESSION CHECK -->
+	<script src="//cdn.auth0.com/w2/auth0-7.1.min.js"></script>
+	<!-- END SESSION CHECK -->
+
+	<!-- File Stack dependency files -->
+	<script type="text/javascript" src="//static.filestackapi.com/v3/filestack.js"></script>
+	<link rel="stylesheet" href="//static.filestackapi.com/picker/v3/0.4.1/main.css">
+
+	<!-- incred theme js files -->
+	<script src="//assets.incred.com/js/app.min.js"></script>
+	<script src="//assets.incred.com/js/bootstrap.min.js"></script>
+	<script src="//assets.incred.com/js/quick-nav.min.js"></script>
+	<script src="//assets.incred.com/js/layout.min.js"></script>
+	<script src="//assets.incred.com/js/bootstrap-datetimepicker.min.js"></script>
+	<script src="//assets.incred.com/js/bootstrap-datepicker.min.js"></script>
+	<script src="//assets.incred.com/js/bootstrap-timepicker.min.js"></script>
+	<!--<script src="//assets.incred.com/js/datatable.js"></script>
+	<script src="//assets.incred.com/js/datatables.min.js"></script>
+	<script src="//assets.incred.com/js/datatables.bootstrap.js"></script>-->
+	<script src="//assets.incred.com/js/md5.min.js"></script>
+
+
+
+	<!-- The polyfills js is generated during the build process -->
+	<script src="build/polyfills.js"></script>
+
+	<!-- The bundle js is generated during the build process -->
+	<script src="build/main.js"></script>
+
+</body>
+
+</html>

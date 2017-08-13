@@ -1,0 +1,299 @@
+.btn.btn-outline.incred.active,
+.btn.btn-outline.incred:active,
+.btn.btn-outline.incred:active:focus,
+.btn.btn-outline.incred:active:hover,
+.btn.btn-outline.incred:focus,
+.btn.btn-outline.incred:hover {
+    border-color: #e34155;
+    color: #FFF;
+    background-color: #e34155;
+}
+
+.btn.btn-outline.incred {
+    border-color: #e34155;
+    color: #e34155;
+    background: 0 0;
+}
+
+.btn.incred:not(.btn-outline) {
+    color: #FFF;
+    background-color: #e34155;
+    border-color: #e34155;
+}
+
+#tout:first-child div {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #ddd;
+    border-radius: 50% !important;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+#tout:first-child>div>div {
+    width: 40px;
+    height: 40px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    margin: auto;
+    overflow: hidden;
+}
+
+#tout:first-child div div div {
+    width: 110px;
+    height: 110px;
+    margin: auto;
+    top: 360px;
+    background-color: #472e4f;
+    border-radius: 0%;
+    border: none;
+    animation-name: anim, color;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes anim {
+    100% {
+        top: 0
+    }
+}
+
+
+/* @keyframes color{
+  0%  { background-color: green; }
+  25%  { background-color: green; }
+  50% { background-color: red; }
+  75% { background-color: yellow; }
+  100% { background-color: blue; }
+} */
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    z-index: 10;
+    display: block;
+    overflow: auto;
+    top: 0;
+    left: 0;
+}
+
+.pageLoading {
+    -webkit-border-radius: 4px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+    margin-top: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    opacity: .7;
+    background-color: #f1f1f7;
+    vertical-align: middle;
+    -webkit-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search {
+    display: none !important;
+}
+
+.page-content-row .page-sidebar .navbar-nav>li>a {
+    color: #636e77 !important;
+    font-weight: normal !important;
+    background: #f8f8f8 !important;
+    text-transform: capitalize !important;
+}
+
+.page-content-row .page-sidebar .navbar-nav>li>a:hover {
+    color: #f16138 !important;
+    background: #fff !important;
+}
+
+.dropdown-menu-v2 {
+    background: #f8f8f8 !important;
+}
+
+.dropdown-menu-v2>li>a:focus,
+.dropdown-menu-v2>li>a:hover {
+    background: #f8f8f8 !important;
+    color: #f16138 !important;
+}
+
+.dropdown-menu-v2:before {
+    border-color: transparent transparent #f8f8f8 !important;
+}
+
+body {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.initialism,
+.text-uppercase {
+    text-transform: capitalize;
+}
+
+.portlet.light>.portlet-title>.caption>.caption-subject {
+    font-size: 18px !important
+}
+
+.font-dark {
+    color: #f16138 !important;
+}
+
+.btn.btn-outline.red {
+    color: #f16138 !important;
+    border-color: #f16138 !important;
+}
+
+.btn.btn-outline.red.active,
+.btn.btn-outline.red:active,
+.btn.btn-outline.red:active:focus,
+.btn.btn-outline.red:active:hover,
+.btn.btn-outline.red:focus,
+.btn.btn-outline.red:hover {
+    border-color: #f16138 !important;
+    color: #fff !important;
+    background-color: #f16138 !important;
+}
+
+.sbold {
+    font-weight: 400 !important;
+}
+
+.font-red {
+    color: #f16138 !important;
+}
+
+.uppercase {
+    text-transform: capitalize !important;
+}
+
+.breadcrumbs h1 {
+    margin: 0 20px 0 0;
+    float: left;
+    font-size: 18px !important;
+    font-weight: 200 !important;
+    line-height: 1.4;
+    color: #f16138 !important;
+}
+
+.breadcrumbs h1,
+.page-content-row .page-sidebar h3 {
+    text-transform: capitalize !important;
+}
+
+.btn.blue:not(.btn-outline).active,
+.btn.blue:not(.btn-outline):active,
+.btn.blue:not(.btn-outline):hover,
+.open>.btn.blue:not(.btn-outline).dropdown-toggle {
+    color: #fff !important;
+    background-color: #f16138 !important;
+    border-color: #f16138 !important;
+}
+
+.btn.blue:not(.btn-outline) {
+    color: #f16138 !important;
+    ;
+    background-color: #fff !important;
+    border-color: #f16138 !important;
+}
+
+.btn.blue:not(.btn-outline): hover {
+    color: #fff !important;
+    background-color: #fff !important;
+    border-color: #fff !important;
+}
+
+.btn.btn-outline.green.active,
+.btn.btn-outline.green:active,
+.btn.btn-outline.green:active:focus,
+.btn.btn-outline.green:active:hover,
+.btn.btn-outline.green:focus,
+.btn.btn-outline.green:hover {
+    color: #fff !important;
+    ;
+    background-color: #f16138 !important;
+    border-color: #f16138 !important;
+}
+
+.btn.btn-outline.green {
+    color: #f16138 !important;
+    background-color: #fff !important;
+    border-color: #f16138 !important;
+}
+
+.car-loan-document {
+    margin: -30px 0px 0px -15px !important;
+}
+
+.user-profile {
+    color: #D9472F;
+    text-align: left;
+}
+
+.user-profile span {
+    font-weight: 700;
+}
+
+
+/*{
+    font-size: 30px;
+    font-weight: 600;
+    color: #f46138;
+}*/
+
+.btn-hover-cls .iradio_line-default:hover {
+    color: #FFF;
+    background-color: #f16138;
+    border-color: #f16138;
+}
+
+
+/* filestack upload area alignment issue */
+
+.fsp-drop-area {
+    /*top: inherit !important;*/
+}
+
+.btn-hover-cls .iradio_line-default:hover {
+    color: #FFF;
+    background-color: #f16138;
+    border-color: #f16138;
+}
+
+.alert-md.select-alert.single-select-alert .alert-radio-label {
+    overflow: hidden !important;
+    white-space: normal !important;
+}
+
+.alert-ios.select-alert.single-select-alert .alert-radio-label {
+    overflow: hidden !important;
+    white-space: normal !important;
+}
+
+.alert-wp.select-alert.single-select-alert .alert-radio-label {
+    overflow: hidden !important;
+    white-space: normal !important;
+}
+.btn.btn-outline.incred {
+    color: #FFF;
+    border-color: #f16138;
+    background-color: #f16138;
+}
+.margin{
+     margin: 15px 0px !important;
+ }

@@ -1,0 +1,116 @@
+AOT steps for Angular.
+
+Step 1 : 
+
+Install a few new npm dependencies with the following command:
+
+	npm install @angular/compiler-cli @angular/platform-server --save
+
+Step 2 : 
+
+ngc requires its own tsconfig.json with AOT-oriented settings. Copy the original src/tsconfig.json to a file called tsconfig-aot.json on the project root, then modify it as follows.
+
+	1) tsconfig-aot.json ------ for web
+	2) tsconfig-mobile-aot.json ------ for mobile
+
+Step 3: Pointing to tsconfig-aot.json to ngc compiler.
+
+	"node_modules/.bin/ngc" -p tsconfig-aot.json
+
+Note : change the following in tsconfig-aot.json for universal app -
+
+ "files": [
+    "src/app/web/app.module.ts",
+    "src/app/main.ts"
+  ],
+
+  and
+
+  "angularCompilerOptions": {
+   "genDir": "aotweb",
+   "skipMetadataEmit" : true
+ }
+
+The AOT compiler requires that @Component URLS for external templates and CSS files be component-relative. That means that the value of @Component.templateUrl is a URL value relative to the component class file. For example, an 'app.component.html' URL means that the template file is a sibling of its companion app.component.ts file.
+
+While JIT app URLs are more flexible, stick with component-relative URLs for compatibility with AOT compilation.
+
+
+Initiate AOT compilation from the command line using the previously installed ngc compiler by executing: 
+	
+	"node_modules/.bin/ngc" -p tsconfig-aot.json
+
+Note: After the 3rd step you will see the NgFactory files for each component under the outpot directory - aot to aotweb/aotmobile(as per our configuration for universal app).
+
+Step 4 : Bootstrap
+
+The AOT approach changes application bootstrapping.
+
+Instead of bootstrapping AppModule, you bootstrap the application with the generated module factory, AppModuleNgFactory.
+
+Make a copy of main.ts and name it main-jit.ts
+
+Open main.ts and convert it to AOT compilation. Switch from the platformBrowserDynamic.bootstrap used in JIT compilation to platformBrowser().bootstrapModuleFactory and pass in the AOT-generated AppModuleNgFactory.
+
+Note : Check our folder for aotweb and modified  main.ts file.
+
+use the following command to recompile - 
+
+	"node_modules/.bin/ngc" -p tsconfig-aot.json
+
+
+Step 5 : Tree shaking
+
+AOT compilation sets the stage for further optimization through a process called tree shaking. A tree shaker walks the dependency graph, top to bottom, and shakes out unused code like dead leaves in a tree.
+
+Tree shaking can greatly reduce the downloaded size of the application by removing unused portions of both source and library code. In fact, most of the reduction in small apps comes from removing unreferenced Angular features.
+
+For example, this demo application doesn't use anything from the @angular/forms library. There is no reason to download forms-related Angular code and tree shaking ensures that you don't.
+
+Step 6: Rollup
+
+This process illustrates a tree shaking utility called Rollup. 
+
+Rollup statically analyzes the application by following the trail of import and export statements. It produces a final code bundle that excludes code that is exported, but never imported.
+
+Rollup can only tree shake ES2015 modules which have import and export statements.
+
+In the terminal window, install the Rollup dependencies with this command:
+
+	npm install rollup rollup-plugin-node-resolve rollup-plugin-commonjs rollup-plugin-uglify --save-dev
+
+Next, create a configuration file (rollup-config.js) in the project root directory to tell Rollup how to process the application. The cookbook configuration file looks like this.
+
+Note : For Universal app change the entry path of main.js in rollup.config.js to -
+
+	 	entry: 'src/app/main.js',
+
+
+Rollup Plugins : Optional plugins filter and transform the Rollup inputs and output.
+
+Refer Rollup Plugins at - https://angular.io/guide/aot-compiler#compile
+
+
+Run Rollup : Execute the Rollup process with this command:
+
+	"node_modules/.bin/rollup"  -c rollup-config.js
+
+It will generate the build.js which we can include in index.html body and copy past the code to any server port and test it and also include shim.min.js and zone.js scripts in index.html header tag.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
